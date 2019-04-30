@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans');
 
 /* General HTML Styling */
 
@@ -12,22 +12,23 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #00000;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.9vh;
   font-weight: lighter;
   height: 100%;
+}
 
+h1, h2 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 38px;
 }
 
 
 /* Start of Header and Navigation styling */
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 header {
   width: 100%;
@@ -36,17 +37,21 @@ header {
   position: sticky;
 }
 
-nav {
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: auto;
   overflow: hidden;
 }
 
-nav img {
-  height: 180px;
+.navigation img {
+  height: 18vh;
   width: auto;
   margin-left: 20px;
   margin-top: -5px;
+
 }
 
 .nav-links a {
@@ -56,6 +61,80 @@ nav img {
   margin-top: -5px;
   padding-right: 20px;
 }
+
+.Banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 82vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/Banner.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  z-index: -1;
+  padding: 0 1.5em;
+}
+
+.Banner h1 {
+  margin-bottom: 50vh;
+  font-size: 6.5vh;
+  text-align: center;
+  color: #3B5998;
+  line-height: 58px;
+	font-weight: 900;
+}
+
+.Banner p {
+  text-align: center;
+  font-size: 1.7vh;
+}
+
+.Welcome {
+	min-height: 20vh;
+	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.Welcome h2 {
+	margin-bottom: 50px;
+}
+
+.Box1 img, .Box4 img {
+	max-width: 100%;
+}
+
+.Box4 img {
+	margin-top: -3px;
+}
+
+.Welcome p {
+  padding-top: 5px;
+  padding-bottom: 8px;
+	margin-right: 2em;
+	font-size: 18px;
+}
+
+.Box2, .Box3 {
+  padding-left: 7em;
+	padding-top: 5em;
+}
+
+.About-Us {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.About-Us h2 {
+	text-align: center;
+}
+
+
+
+
 
 
 /* Banner styling specific to the homepage */
