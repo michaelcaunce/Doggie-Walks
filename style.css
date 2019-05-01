@@ -14,11 +14,10 @@
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.9vh;
-  font-weight: lighter;
   height: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 500;
 }
@@ -27,6 +26,9 @@ h2 {
 	font-size: 38px;
 }
 
+h3 {
+  font-size: 25px;
+}
 
 /* Start of Header and Navigation styling */
 
@@ -47,11 +49,11 @@ header {
 }
 
 .navigation img {
-  height: 18vh;
+  height: 300px;
   width: auto;
   margin-left: 20px;
-  margin-top: -5px;
-
+  margin-top: -100px;
+  margin-bottom: -100px;
 }
 
 .nav-links a {
@@ -62,13 +64,15 @@ header {
   padding-right: 20px;
 }
 
+/* Start of Banner styling */
+
 .Banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 82vh;
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/Banner.jpeg);
+  min-height: 85vh;
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0, 0, 0, 0.01)), url('images/Banner.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,12 +82,10 @@ header {
 }
 
 .Banner h1 {
-  margin-bottom: 50vh;
+  margin-bottom: 40vh;
   font-size: 6.5vh;
   text-align: center;
   color: #3B5998;
-  line-height: 58px;
-	font-weight: 900;
 }
 
 .Banner p {
@@ -91,14 +93,24 @@ header {
   font-size: 1.7vh;
 }
 
-.Welcome {
-	min-height: 20vh;
+/* Start of Welcome styling */
+
+.Welcome, .About {
+	height: auto;
 	display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
-.Welcome h2 {
-	margin-bottom: 50px;
+.Welcome h2, .About h2, .Team h2 {
+	margin-bottom: 10px;
+}
+
+.Welcome hr {
+  width: 60%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
 }
 
 .Box1 img, .Box4 img {
@@ -109,7 +121,7 @@ header {
 	margin-top: -3px;
 }
 
-.Welcome p {
+.Welcome p, .About p, .Team p {
   padding-top: 5px;
   padding-bottom: 8px;
 	margin-right: 2em;
@@ -121,20 +133,92 @@ header {
 	padding-top: 5em;
 }
 
-.About-Us {
+/* Start of About styling */
+
+.About h3, .Info h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.About hr {
+  width: 25%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+.About hr:last-of-type {
+  width: 23%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-bottom:30px
+}
+
+/* Start of Meet the Team styling */
+
+.Team-Wrapper {
+  background-color: #F8F9FA;
+  margin-top: -3px;
+}
+
+.Team {
   max-width: 1200px;
   margin: auto;
   overflow: hidden;
-  padding: 4rem 1rem;
+  padding-top: 5em;
 }
 
-.About-Us h2 {
-	text-align: center;
+.Team hr {
+  width: 28%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
 }
 
+.Profiles {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1.5em;
+}
 
+.Profiles img {
+  height: 200px;
+  width: 100%;
+  border-radius: 100px;
+}
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 1200px;
+  height: auto;
+}
 
+.card {
+  min-width: 250px;
+}
 
+.Info {
+  background: white;
+  border-radius: 5px;
+  width: auto;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  height: 100px;
+  text-align: center;
+}
 
-/* Banner styling specific to the homepage */
+.Info hr {
+  width: 75%;
+  height: 2px;
+  border: 0 none;
+  text-align:center;
+  margin: 0 auto;
+  background-color: #EB7859;
+  margin-bottom: 15px;
+}
