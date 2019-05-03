@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans|Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans|Love+Ya+Like+A+Sister');
 
 /*
 
@@ -29,7 +29,7 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Love Ya Like A Sister', cursive;
 	font-weight: 500;
 }
 
@@ -149,10 +149,11 @@ input[type=checkbox]:checked ~ label span {
 
 .Banner h1 {
   margin-bottom: 40vh;
-  font-size: 8vh;
+  font-size: 7vh;
   text-align: center;
+  font-weight: 400;
   color: #3B5998;
-  font-family: 'Yellowtail', cursive;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 .Banner p {
@@ -166,6 +167,8 @@ input[type=checkbox]:checked ~ label span {
 	height: auto;
 	display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  background-image: url('images/Content-Background.jpg');
+  background-repeat: repeat;
 }
 
 .Welcome h2, .About h2, .Team h2, .Services h2, .Gallery h2, .Find h2 {
@@ -265,7 +268,8 @@ input[type=checkbox]:checked ~ label span {
 /* Start of Meet the Team styling */
 
 .Team-Wrapper, .Gallery-Wrapper {
-  background-color: #F8F9FA;
+  background-image: url('images/Content-Background.jpg');
+  background-repeat: repeat;
   margin-top: -3px;
 }
 
@@ -331,6 +335,11 @@ input[type=checkbox]:checked ~ label span {
 
 
 /* Start of the styling for the Services section. */
+
+.Services-Wrapper, .Contact-Wrapper {
+  background-image: url('images/Content-Background.jpg');
+  background-repeat: repeat;
+}
 
 .Services-Grid {
   display: grid;
@@ -573,7 +582,7 @@ input[type=checkbox]:checked ~ label span {
 }
 
 .fas:hover{
-  color: #fff;
+  color: #3B5998;
 }
 
 /* Start of the form styling */
@@ -650,6 +659,7 @@ input[type=checkbox]:checked ~ label span {
 /* Start of Footer Styling */
 
 footer {
+  border-top: solid #3B5998 10px;
   padding: 2.2rem;
   background-color: #39403E;
   box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
@@ -880,5 +890,9 @@ hr {
 
   .Services .Information {
     padding: 15px 15px;
+  }
+
+  .Special-Offer h3 {
+    font-size: 1.9vh;
   }
 }
