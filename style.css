@@ -163,15 +163,37 @@ input[type=checkbox]:checked ~ label span {
 
 /* Start of Welcome styling */
 
-.Welcome, .About {
-	height: auto;
-	display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+.Welcome-Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Welcome {
+  display: flex;
+  flex-direction: row;
   background-image: url('images/Content-Background.jpg');
   background-repeat: repeat;
 }
 
-.Welcome h2, .About h2, .Team h2, .Services h2, .Gallery h2, .Find h2 {
+.Welcome-Odd :nth-child(odd) {
+  order: 2;
+}
+
+.Welcome section {
+  padding: 25px 30px;
+  flex: 1.45;
+	height: auto;
+}
+
+.Welcome img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 50vh;
+  flex: 1.55;
+}
+
+.Welcome h2, .Team h2, .Services h2, .Gallery h2, .Find h2 {
 	margin-bottom: 10px;
 }
 
@@ -183,34 +205,40 @@ input[type=checkbox]:checked ~ label span {
   margin-bottom:30px;
 }
 
-.Welcome a, .About a {
+#hr-W-1, #hr-W-2 {
+  width: 60%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-top: 10px;
+}
+
+#hr-W-2 {
+  width: 20% !important;
+}
+
+#hr-W-3 {
+  width: 20%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-top: 10px;
+}
+
+.Welcome hr:last-of-type {
+
+}
+
+.Welcome a {
   text-decoration: none;
   color: #3B5998;
 }
 
-.Box1 img, .Box4 img {
-	max-width: 100%;
-  height: auto;
-}
-
-.Box4 img {
-	margin-top: -3px;
-}
-
-.Box-Hidden img {
-  display: none;
-}
-
-.Welcome p, .About p, .Team p, .Services p {
+.Welcome p, .Team p, .Services p {
   padding-top: 5px;
   padding-bottom: 8px;
 	margin-right: 2em;
 	font-size: 18px;
-}
-
-.Box2, .Box3 {
-  padding-left: 7em;
-	padding-top: 5em;
 }
 
 /* Start of styling Mid-Banner-1 */
@@ -221,6 +249,11 @@ input[type=checkbox]:checked ~ label span {
   justify-content: center;
   align-items: center;
   height: auto;
+}
+
+.Mid-Banner-1, .Team, .Gallery, .Find {
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .Mid-Banner-Container, .Special-Offer-Container {
@@ -240,29 +273,6 @@ input[type=checkbox]:checked ~ label span {
   height: 2px;
   background-color: #EB7859;
   border: 0 none;
-}
-
-/* Start of About styling */
-
-.About h3, .Info h3, .Services h3, .Find-Container h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.About hr {
-  width: 25%;
-  height: 2px;
-  background-color: #3B5998;
-  border: 0 none;
-  margin-bottom:30px;
-}
-
-.About hr:last-of-type {
-  width: 23%;
-  height: 2px;
-  background-color: #EB7859;
-  border: 0 none;
-  margin-bottom:30px
 }
 
 /* Start of Meet the Team styling */
@@ -735,18 +745,20 @@ footer p {
     width: 100% !important;
   }
 
-  .Box1 img {
-  	display: none;
+  .Welcome {
+    flex-direction: column;
   }
 
-  .Box4 img {
-    margin-top: 5px;
+
+  .Welcome-Odd :nth-child(odd) {
+    order: 1;
   }
 
-  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
-    padding-left: 10px;
-  	padding-top: 10px;
+  .Welcome-Even :nth-child(odd) {
+    order: 2;
   }
+
+
 
   .Profiles .Cards {
     display: grid;
@@ -795,9 +807,9 @@ footer p {
     font-size: 6vh;
   }
 
-hr {
-  width: 100% !important;
-}
+  hr {
+    width: 100% !important;
+  }
   nav {
       height: 100px;
     }
@@ -839,9 +851,26 @@ hr {
      display: block;
    }
 
-  .Box1 img {
-  	display: none;
-  }
+  .Welcome{
+   flex-direction: column;
+ }
+
+ .Welcome img {
+   height:  300px;
+ }
+
+ .Welcome section {
+   height: auto;
+ }
+
+
+ .Welcome-Odd :nth-child(odd) {
+   order: 1;
+ }
+
+ .Welcome-Even :nth-child(odd) {
+   order: 2;
+ }
 
   .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
     padding-left: 10px;
