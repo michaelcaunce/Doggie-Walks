@@ -492,7 +492,6 @@ input[type=checkbox]:checked ~ label span {
   height: 300px;
   -webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-
 }
 
 .Gallery-Container img:hover {
@@ -684,6 +683,43 @@ footer p {
     margin-bottom: 50vh;
     font-size: 6.5vh;
   }
+
+  nav {
+      height: 100px;
+    }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #3B5998;;
+  }
+
+  .nav-links a {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #FFFFFF;
+  }
+
+  .nav-links a:first-child {
+    margin-top: -170px;
+  }
+
+  .nav-links a:hover {
+    color: #EB7859;
+  }
+
+  nav label {
+     display: block;
+   }
+
 
   hr {
     width: 100% !important;
