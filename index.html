@@ -4,28 +4,41 @@
     <title>Doggie Walks</title>
     <meta charset="utf-8">
     <meta name="description" content="Doggie Walks">
-    <meta name="keywords" content="Dogs, Doggie, Walks, Doggie Walks, Service">
+    <meta name="keywords" content="Dogs, Doggie, Walks, Doggie Walks, Service, dog walk, dog walking,
+    Manchester, Macclesfield, Southport, Warrington">
     <meta name="author" content="Michael Caunce">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#FAB700">
+    <meta name="theme-color" content="#3B5998">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- Start of Header -->
     <header>
       <!-- Start of Navigation -->
-      <nav class="navigation">
+      <nav class="Navigation">
         <a href="index.html">
-          <img src="images/Logo.svg" alt="iiT logo, click to return to the homepage " title="Return Home">
+          <img src="images/logo.svg" alt="iiT logo, click to return to the homepage " title="Return Home">
         </a>
+        <!-- Start of mobile navigation using checkbox
+
+        Use of checkbox as an alternative to JS or JQuery. CSS sets the span as a toggle ensuring that when the
+        hanburger is clicked, it ticks the checkbox. Styling in CSS defines what happens when the checkbox is clicked.  -->
+        <input type="checkbox" id="Nav-Hide">
+        <label for="Nav-Hide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <!-- End of mobile nav -->
         <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Meet The Team</a>
-          <a href="#">Services & Cost</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#team">Our Team</a>
+          <a href="#services">Services & Cost</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact Us</a>
         </div>
       </nav>
     </header>
@@ -33,56 +46,63 @@
     <section class="Banner">
       <h1>Helping our animal friends one paw at a time</h1>
     </section>
-    <section class="Welcome">
+    <section class="Welcome" id="home">
     	<div class="Box1">
     		<img src="images/Adobe2.jpeg" alt="">
     	</div>
     	<div class="Box2">
-			<h2>Welcome To Doggie Walks</h2>
-      <hr>
-			<p>Welcome to Doggie Walks! We are committed to providing professional and personal care to your beloved four-legged friends.</p>
-			<p>We are based in Macclesfield we offer exciting and stimulating walks all over the beautiful Cheshire countryside. We guarantee your dog will come home tired and content.</p>
-			<p>We recognise every dog's needs are different and how busy daily life can be. With services starting from only £10 we ensure you the best possible service to suit the needs of both you and your pooch.
-			We are also fully insured for everybody's peace of mind, for more information on this please contact us or email at info@doggiewalks.co.uk</p>
-			<br>
-			<p>We also offer different services such as:
-			•	Pet Sitting (Puppy and Elderly)
-			•	Small pet visits
-			•	Overnight Pet Sitting
-			There's something to suit everyone but if you can't find what you're looking for don't hesitate to contact us and we'll find the perfect solution for you and your companion!
-			</p>
+  			<h2>Welcome To Doggie Walks</h2>
+        <hr>
+  			<p>Welcome to Doggie Walks! We are committed to providing professional and personal care to your beloved four-legged friends.</p>
+  			<p>We are based in Macclesfield we offer exciting and stimulating walks all over the beautiful Cheshire countryside. We guarantee your dog will come home tired and content.</p>
+  			<p>We recognise every dog's needs are different and how busy daily life can be. With services starting from only £10 we ensure you the best possible service to suit the needs of both you and your pooch.
+  			We are also fully insured for everybody's peace of mind, for more information on this please contact us or email at <a href="info@doggiewalks.co.uk">info@doggiewalks.co.uk</a></p>
+  			<br>
+  			<p>We also offer different services such as:
+  			•	Pet Sitting (Puppy and Elderly)
+  			•	Small pet visits
+  			•	Overnight Pet Sitting
+  			There's something to suit everyone but if you can't find what you're looking for don't hesitate to contact us and we'll find the perfect solution for you and your companion!
+  			</p>
     	</div>
     </section>
-    <section class="About">
+    <div class="Box-Hidden">
+      <img src="images/Adobe4.jpeg" alt="">
+    </div>
+    <section class="About" id="about">
     	<div class="Box3">
-			<h2>About Us</h2>
-      <hr>
-			<p>Doggie walks are committed to ensuring that your pet is safe, healthy and active. Our canine friends should feel different terrain under their paws, hear different sounds and see different sights and have a decent sniff about!</p>
-   		<p>While dogs need daily exercise in order to stay healthy, for many people it's not always possible to walk their pets regularly. That's why we established Doggie Walks, to help people across Manchester ensure their dogs live happy lives.</p>
-      <h3>How It Works</h3>
-      <hr>
-      <p>Your dog will be collected from your home and taken to a local park for a walk with their pals. Exercise, mental stimulation, socialisation and play make for a happier, calmer and more contented dog. With a maximum of 4 dogs per walk you can be sure that your best friend is getting all the attention they deserve.</p>
-      <p>However, we also accept drop-offs at your nearest local branch.  You can find out more about where your nearest branch is via our <a href="#">contact page.</a></p>
+  			<h2>About Us</h2>
+        <hr>
+  			<p>Doggie walks are committed to ensuring that your pet is safe, healthy and active. Our canine friends should feel different terrain under their paws, hear different sounds and see different sights and have a decent sniff about!</p>
+     		<p>While dogs need daily exercise in order to stay healthy, for many people it's not always possible to walk their pets regularly. That's why we established Doggie Walks, to help people across Manchester ensure their dogs live happy lives.</p>
+        <h3>How It Works</h3>
+        <hr>
+        <p>Your dog will be collected from your home and taken to a local park for a walk with their pals. Exercise, mental stimulation, socialisation and play make for a happier, calmer and more contented dog. With a maximum of 4 dogs per walk you can be sure that your best friend is getting all the attention they deserve.</p>
+        <p>However, we also accept drop-offs at your nearest local branch.  You can find out more about where your nearest branch is via our <a href="#contact">contact page.</a></p>
     	</div>
     	<div class="Box4">
     		<img src="images/Adobe4.jpeg" alt="">
     	</div>
     </section>
-    <!-- <aside class="ad-3">
-      <div class="container">
-        <h1>Special Offer</h1>
-        <p>50% off home visits for new customers.  </p>
+    <!-- Start of mid-banner displaying covered areas-->
+    <section class="Mid-Banner-1">
+      <div class="Mid-Banner-Container">
+        <h2>Areas We Cover</h2>
+        <hr>
+        <h3>Manchester - Macclesfield - Southport - Warrington</h3>
+        <hr>
       </div>
-    </aside> -->
-    <section class="Team-Wrapper">
+    </section>
+    <section class="Team-Wrapper" id="team">
       <article class="Team">
         <h2>Meet The Team</h2>
         <hr>
-        <p>Meet the doggie walks team! We’re fully trained and insured to work with animals and are committed to the health and benefits of your pet. We aim to keep providing the best knowledge regarding dogs as we can, and to do this we believe you cannot sit still in this occupation as we learn more about dogs daily. We ensure that our knowledge is kept up-to-date by attending regular seminars and courses presented by well-respected canine trainers, behaviorists and practitioners.</p>
+        <p>Meet the doggie walks team! We’re fully trained and insured to work with animals and are committed to the health and benefits of your pet. We aim to keep providing the best knowledge regarding dogs as we can, and to do this we believe you cannot sit still in this occupation as we learn more about dogs daily.</p>
+        <p>We ensure that our knowledge is kept up-to-date by attending regular seminars and courses presented by well-respected canine trainers, behaviorists and practitioners.</p>
       </article>
         <article class="Profiles">
-          <div class="cards">
-            <div class="card">
+          <div class="Cards">
+            <div class="Card">
               <img src="images/team/lori-hanson.jpg" alt="">
               <div class="Info">
                 <h3>Lori Hanson</h3>
@@ -90,7 +110,7 @@
                 <h4>Founder</h4>
               </div>
             </div>
-            <div class="card">
+            <div class="Card">
               <img src="images/team/gary-simpson.jpg" alt="">
               <div class="Info">
                 <h3>Gary Simpson</h3>
@@ -98,7 +118,7 @@
                 <h4>Team manager</h4>
               </div>
             </div>
-            <div class="card">
+            <div class="Card">
               <img src="images/team/rebecca-harrison.jpg" alt="">
               <div class="Info">
                 <h3>Rebecca Harrison</h3>
@@ -106,19 +126,205 @@
                 <h4>Professional Dog walker</h4>
               </div>
             </div>
-          <div class="card">
+          <div class="Card">
             <img src="images/team/joanna-davies.jpg" alt="">
             <div class="Info">
               <h3>Joanna Davies</h3>
-              <hr>
+              <hr class="hr-long">
               <h4>Professional Dog walker</h4>
             </div>
           </div>
         </div>
       </article>
     </section>
-
-
-
-  </body>
-</html>
+    <!-- Start of services cards -->
+    <section class="Services-Grid" id="services">
+      <div class="Services">
+        <h2>Services & Cost</h2>
+        <hr>
+        <p class="Services-P">Your dog shall receive the full-length time it deserves. Check for your local branch and pop in if you’re unsure which service is right for you. Every dog is unique, meaning that every dog deserves our full attention 7 days a week.</p>
+        <article class="Special-Offer">
+          <div class="Special-Offer-Container">
+            <!-- <h3>New Customer Offer</h3>
+            <hr> -->
+            <h3>50% off home visits for new customers</h3>
+            <hr>
+          </div>
+        </article>
+        <div class="Cards">
+          <!-- Card One -->
+          <div class="Card">
+            <article>
+              <div class="img-Container">
+                <img src="images/services1.jpeg" alt="Food">
+              </div>
+              <div class="Information">
+                <h3>Dog Walking</h3>
+                <hr>
+                <ul>
+                  <li>Duration: 1 hour (enquire for more)</li>
+                  <li>We appreciate that not all dogs enjoy group walks, therefore we provide two different services. Solo or group, discover which option is best for your dog.</li>
+                </ul>
+                <div class="Prices">
+                  <h4 class="Cost">£12/h</h4>
+                  <a href="#contact"  class="Enquire">
+                    <h4>Enquire Now</h4>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Card 2 -->
+          <div class="Card">
+            <article>
+              <div class="img-Container">
+                <img src="images/services2.jpeg" alt="Food">
+              </div>
+              <div class="Information">
+                <h3>House Calls</h3>
+                <hr>
+                <ul>
+                  <li>Duration: 1 hour (enquire for more)</li>
+                  <li>Do you need your dog looking after while you’re not home? This service allows you to have peace of mind while we ensure that your dog has the attention and care it deserves.</li>
+                </ul>
+                <div class="Prices">
+                  <h4 class="Cost">£15/h</h4>
+                  <a href="#contact"  class="Enquire">
+                    <h4>Enquire Now</h4>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Card 3 -->
+          <div class="Card">
+            <article>
+              <div class="img-Container">
+                <img src="images/services3.jpg" alt="Food">
+              </div>
+              <div class="Information">
+                <h3>Day Care</h3>
+                <hr>
+                <ul>
+                  <li>Duration: 8 hours per day</li>
+                  <li>Our professional day care centers provide the most up to date and clean facilities which ensures that your dog is safe, protected and healthy. This will cover all services from feeding, bathing walking and sleeping</li>
+                </ul>
+                <div class="Prices">
+                  <h4 class="Cost">£60/Day</h4>
+                  <a href="#contact"  class="Enquire">
+                    <h4>Enquire Now</h4>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Start of the gallery -->
+      <section class="Gallery-Wrapper" id="gallery">
+        <article class="Gallery">
+          <h2>Gallery</h2>
+          <hr>
+        </article>
+        <section class="Gallery-Container">
+          <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt=""></a>
+          <a href="images/gallery2.jpeg"><img src="images/gallery2.jpeg" alt=""></a>
+          <a href="images/gallery3.jpeg"><img src="images/gallery3.jpeg" alt=""></a>
+          <a href="images/gallery4.jpeg"><img src="images/gallery4.jpeg" alt=""></a>
+          <a href="images/gallery5.jpeg"><img src="images/gallery5.jpeg" alt=""></a>
+          <a href="images/gallery7.jpeg"><img src="images/gallery7.jpeg" alt=""></a>
+          <a href="images/gallery8.jpeg"><img src="images/gallery8.jpeg" alt=""></a>
+          <a href="images/gallery9.jpeg"><img src="images/gallery9.jpeg" alt=""></a>
+          <a href="images/gallery10.jpeg"><img src="images/gallery10.jpeg" alt=""></a>
+          <a href="images/gallery11.jpeg"><img src="images/gallery11.jpeg" alt=""></a>
+          <a href="images/gallery12.jpeg"><img src="images/gallery12.jpeg" alt=""></a>
+          <a href="images/gallery13.jpeg"><img src="images/gallery13.jpeg" alt=""></a>
+        </section>
+      </section>
+      <!-- Start of the contact section -->
+      <article class="Find" id="contact">
+        <h2>Find Us</h2>
+        <hr>
+        <p>We have a wide variety of daycare facilities, listed below is all our locations and their address’. Feel free to pop in or fill out the form below. </p>
+        <div class="Find-Container Find-Grid">
+          <div>
+            <h3>Manchester City Centre</h3>
+            <hr id="hr-long">
+            <p>Doggie walks</p>
+            <p>3-5 St John Street</p>
+            <p>Manchester</p>
+            <p>M3 4DN</p>
+          </div>
+          <div>
+            <h3>Macclesfield</h3>
+            <hr>
+            <p>Doggie walks</p>
+            <p>36 Charlotte Street</p>
+            <p>Macclesfield</p>
+            <p>MSK11 6JB</p>
+          </div>
+          <div>
+            <h3>Southport</h3>
+            <hr>
+            <p>Doggie walks</p>
+            <p>150 Lord Street</p>
+            <p>Southport</p>
+            <p>PR9 0NP</p>
+          </div>
+          <div>
+            <h3>Warrington</h3>
+            <hr>
+            <p>Doggie walks</p>
+            <p>47 Old Liverpool Road</p>
+            <p>Warrington</p>
+            <p>WA5 1AF</p>
+          </div>
+      </article>
+      <!-- Start of the contact form -->
+      <section class="Contact-Container">
+        <h2>Contact Us</h2>
+        <hr>
+        <div class="Contact-icons-Holder">
+          <div class="Contact-icons">
+            <i class="fas fa-envelope"></i>
+            <p>info@doggiewalks.co.uk </p>
+          </div>
+          <div class="Contact-icons">
+            <i class="fas fa-phone"></i>
+            <p>0161 883 1122</p>
+          </div>
+        </div>
+        <!-- Start of the form -->
+        <div class="Form">
+          <div class="Form-Fields">
+            <div class="Fields">
+              <input type="text" placeholder="Name">
+            </div>
+            <div class="Fields">
+              <input type="text" placeholder="Email">
+            </div>
+          </div>
+          <div class="Message-Box">
+            <div class="Message">
+              <textarea placeholder="Message"></textarea>
+            </div>
+          </div>
+          <div class="Form-Button">
+            Send Message
+          </div>
+        </div>
+        <!-- Start of social icons -->
+        <div class="Social-icons-Holder">
+          <div class="Social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </section>
+      <!-- Start of Footer -->
+        <footer>
+          <p>Michael Caunce &copy; 2019</p>
+        </footer>
+      </body>
+    </html>

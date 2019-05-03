@@ -1,9 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans|Yellowtail');
+
+/*
+
+Styling of the page adopts a linear approach with the order of styling reflecting the order of the HTML structure. The exception is when an element shares the same styling.
+Media Queries can be seen at the bottom of the page. Again, each media query adopts a liner approach relating to the styling structure.
+
+ */
 
 /* General HTML Styling */
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -13,7 +24,7 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.9vh;
+  font-size: 2vh;
   height: 100%;
 }
 
@@ -39,29 +50,84 @@ header {
   position: sticky;
 }
 
-.navigation {
+.Navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  height: auto;
-  overflow: hidden;
 }
 
-.navigation img {
-  height: 300px;
+nav {
+  align-items: center;
+  height: 120px;
+  overflow: hidden;
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+}
+
+nav img {
+  height: 250px;
   width: auto;
   margin-left: 20px;
-  margin-top: -100px;
-  margin-bottom: -100px;
+  margin-top: -5px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
+  list-style: none;
+  z-index: 1;
 }
 
 .nav-links a {
   color: #000000;
-  font-size: 2.2vh;
+  font-size: 2vh;
+  font-weight: bold;
   text-decoration: none;
   margin-top: -5px;
   padding-right: 20px;
+}
+
+.nav-links a:hover {
+  color: #3B5998;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+nav label {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 35px;
+}
+
+/* Styling specific to the hamburger icon */
+nav label span {
+  display: block;
+  margin: 4px auto;
+  height: 6px;
+  width: 30px;
+  border-radius: 3px;
+  background-color: #3B5998;
+  transition: 0.5s;
+}
+
+/* Start of Navigation Transition */
+
+input[type=checkbox]:checked ~ .nav-links {
+  top: 0;
+}
+
+/* Change the colour of the label when the the navigation is open. */
+input[type=checkbox]:checked ~ label span {
+  background: #EB7859;
 }
 
 /* Start of Banner styling */
@@ -83,9 +149,10 @@ header {
 
 .Banner h1 {
   margin-bottom: 40vh;
-  font-size: 6.5vh;
+  font-size: 8vh;
   text-align: center;
   color: #3B5998;
+  font-family: 'Yellowtail', cursive;
 }
 
 .Banner p {
@@ -101,7 +168,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
-.Welcome h2, .About h2, .Team h2 {
+.Welcome h2, .About h2, .Team h2, .Services h2, .Gallery h2, .Find h2 {
 	margin-bottom: 10px;
 }
 
@@ -113,15 +180,25 @@ header {
   margin-bottom:30px;
 }
 
+.Welcome a, .About a {
+  text-decoration: none;
+  color: #3B5998;
+}
+
 .Box1 img, .Box4 img {
 	max-width: 100%;
+  height: auto;
 }
 
 .Box4 img {
 	margin-top: -3px;
 }
 
-.Welcome p, .About p, .Team p {
+.Box-Hidden img {
+  display: none;
+}
+
+.Welcome p, .About p, .Team p, .Services p {
   padding-top: 5px;
   padding-bottom: 8px;
 	margin-right: 2em;
@@ -133,9 +210,38 @@ header {
 	padding-top: 5em;
 }
 
+/* Start of styling Mid-Banner-1 */
+
+.Mid-Banner-1 {
+  background-color: #F0F0EA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.Mid-Banner-Container, .Special-Offer-Container {
+  padding-top: 30px;
+}
+
+.Mid-Banner-1 hr {
+  width: 60%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+.Mid-Banner-1 hr:last-of-type {
+  width: 100%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+}
+
 /* Start of About styling */
 
-.About h3, .Info h3 {
+.About h3, .Info h3, .Services h3, .Find-Container h3 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -158,12 +264,12 @@ header {
 
 /* Start of Meet the Team styling */
 
-.Team-Wrapper {
+.Team-Wrapper, .Gallery-Wrapper {
   background-color: #F8F9FA;
   margin-top: -3px;
 }
 
-.Team {
+.Team, .Gallery, .Find {
   max-width: 1200px;
   margin: auto;
   overflow: hidden;
@@ -188,10 +294,10 @@ header {
 .Profiles img {
   height: 200px;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 250px;
 }
 
-.cards {
+.Profiles .Cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -199,7 +305,7 @@ header {
   height: auto;
 }
 
-.card {
+.Profiles .Card {
   min-width: 250px;
 }
 
@@ -214,11 +320,529 @@ header {
 }
 
 .Info hr {
-  width: 75%;
+  width: 85%;
   height: 2px;
   border: 0 none;
   text-align:center;
   margin: 0 auto;
   background-color: #EB7859;
   margin-bottom: 15px;
+}
+
+
+/* Start of the styling for the Services section. */
+
+.Services-Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+.Services {
+  padding-top: 5em;
+}
+
+.Services hr {
+  width: 30%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+.Services .Services-P {
+  margin-bottom: 10px;
+}
+
+.Services article {
+  display: flex;
+}
+
+.Services .img-Container {
+  height: auto;
+  flex: 1;
+}
+
+.Services img {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Styling for the Special Offer inside Services */
+
+.Special-Offer {
+  background-color: #EB7859;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4px;
+  color: #FFFFFF;
+  height: 80px;
+}
+
+.Special-Offer h3 {
+  font-weight: 600 !important;
+}
+
+.Special-Offer-Container hr {
+  width: 100% !important;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+/* Start of styling for the Services Cards and Card and relating elements inside each of the two classes (Cards and Card)*/
+
+.Services .Cards {
+  padding-top: 2em;
+}
+
+.Services .Card {
+  display: block;
+  margin-top: 2em;
+}
+
+.Services .Card:first-child {
+  margin-top: 0 !important;
+}
+
+.Services .Information {
+  flex: 1.2;
+  background: white;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+  padding-left: 7em;
+}
+
+.Information hr {
+  width: 30%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-bottom:30px
+}
+
+.Information ul {
+  list-style-type: none;
+}
+
+.Information ul li {
+  padding-left: 2em;
+  background: url('images/list-icon.png') no-repeat left top;
+  height: 25px;
+}
+
+.Information ul li:last-child {
+    margin-top: 0.5em;
+}
+
+/* Start of the styling for the Price and button to enquire.  */
+
+.Prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  width: 100&;
+  text-align: center;
+}
+
+.Prices h4 {
+  padding: 15px 0;
+  color: #000000;
+}
+
+.Prices a {
+    text-decoration: none;
+}
+
+.Cost {
+  background-color: #3B5998;
+  color: #FFFFFF !important;
+}
+
+.Enquire {
+  background-color: #F0F0EA;
+}
+
+.Enquire:hover {
+  background-color: #EB7859;
+}
+
+/* Start of the Gallery section */
+
+.Gallery-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap:10px;
+}
+
+.Gallery-Container img {
+  width: 100%;
+  height: 300px;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+.Gallery-Container img:hover {
+	opacity: .5;
+}
+
+.Gallery hr {
+  width: 15%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+/* Start of styling for the Find Us section */
+
+.Find-Grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 40px;
+}
+
+.Find hr {
+  width: 20%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+.Find-Container hr {
+  width: 60%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-bottom:30px
+}
+
+#hr-long {
+  width: 100%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-bottom:30px
+}
+
+/* Styling for the contact from container */
+
+.Contact-Container {
+  max-width: 1000px;
+  margin: 50px auto;
+  box-sizing: border-box;
+  padding: 40px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.Contact-Container hr {
+  width: 25%;
+  height: 2px;
+  background-color: #3B5998;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+/* Container for email and phone icon */
+.Contact-icons-Holder {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* email and phone icon styling */
+.Contact-icons .fas {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #EB7859;
+}
+
+.fas:hover{
+  color: #fff;
+}
+
+/* Start of the form styling */
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.Form-Fields {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Message-Box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Fields > input {
+  border: 0;
+  width: 400px;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 18px;
+  background-color: #F8F9FA;
+}
+
+.Message > textarea {
+  width: 100%;
+  border: 0;
+  padding: 10px 20px;
+  outline: none;
+  height: 200px;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif !important;
+  background-color: #F8F9FA;
+}
+
+.Form-Button {
+  padding: 20px 20px;
+  background-color: #3B5998;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.Form-Button:hover{
+  background-color: #F0F0EA;
+  color: #000000;
+}
+
+.Social-icons-Holder {
+  display: flex;
+  justify-content: center;
+  color: #EB7859;
+}
+
+.Social-icons .fab {
+  margin: 0 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.fab:hover{
+  color: #3B5998;
+}
+
+/* Start of Footer Styling */
+
+footer {
+  padding: 2.2rem;
+  background-color: #39403E;
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
+}
+footer p {
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Start of styling for different screen sizes */
+
+@media screen and (max-width: 1300px) {
+
+  .Banner h1 {
+    margin-bottom: 50vh;
+    font-size: 7vh;
+  }
+
+  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
+    padding-left: 10px;
+  	padding-top: 10px;
+  }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .Banner h1 {
+    margin-bottom: 50vh;
+    font-size: 6.5vh;
+  }
+
+  hr {
+    width: 100% !important;
+  }
+
+  .Box1 img {
+  	display: none;
+  }
+
+  .Box4 img {
+    margin-top: 5px;
+  }
+
+  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
+    padding-left: 10px;
+  	padding-top: 10px;
+  }
+
+  .Profiles .Cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Serivces-Grid {
+    display: block;
+  }
+
+  .Services {
+    margin-bottom: 30px;
+  }
+
+  .Services .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .Services article {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .Services .Information {
+    padding: 15px 15px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .Form-Fields {
+    flex-direction: column;
+  }
+  .Fields:first-child > input {
+    margin-bottom: 20px;
+  }
+  .Form .Fields > input {
+    width: 100% !important;
+  }
+
+  .Banner h1 {
+    margin-bottom: 50vh;
+    font-size: 6vh;
+  }
+
+hr {
+  width: 100% !important;
+}
+  nav {
+      height: 100px;
+    }
+
+  nav img {
+    height: 180px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #3B5998;;
+  }
+
+  .nav-links a {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #FFFFFF;
+  }
+
+  .nav-links a:first-child {
+    margin-top: -170px;
+  }
+
+  .nav-links a:hover {
+    color: #EB7859;
+  }
+
+  nav label {
+     display: block;
+   }
+
+  .Box1 img {
+  	display: none;
+  }
+
+  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
+    padding-left: 10px;
+  	padding-top: 10px;
+  }
+
+  .Mid-Banner-1 h2 {
+    font-size: 3vh;
+  }
+
+  .Mid-Banner-1 h3 {
+    font-size: 2vh;
+  }
+
+  .Mid-Banner-1 hr {
+    width: 40%;
+  }
+
+  .Mid-Banner-1 hr:last-of-type {
+    width: 100%;
+  }
+
+  .Profiles .Cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .Serivces-Grid {
+    display: block;
+  }
+
+  .Services {
+    margin-bottom: 30px;
+  }
+
+  .Services .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .Services article {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .Services .Information {
+    padding: 15px 15px;
+  }
 }
