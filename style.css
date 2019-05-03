@@ -668,17 +668,54 @@ input[type=checkbox]:checked ~ label span {
 
 /* Start of Footer Styling */
 
-footer {
+.Footer {
   border-top: solid #3B5998 10px;
-  padding: 2.2rem;
   background-color: #39403E;
-  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.1);
+  padding-top: 2em;
 }
-footer p {
-  margin: 0;
-  text-align: center;
+
+.Footer .Footer-Container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Footer section {
   color: #FFFFFF;
 }
+
+.Footer p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.Footer h3 {
+  margin-bottom: 10px;
+}
+
+.Footer hr {
+  width: 20%;
+  height: 2px;
+  background-color: #EB7859;
+  border: 0 none;
+  margin-bottom:30px;
+}
+
+.Personal {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #3B5998;
+
+}
+
+.Personal p {
+  font-size: 18px !important;
+  color: #ED7859;
+  padding-top: 15px;
+}
+
 
 /* Start of styling for different screen sizes */
 
