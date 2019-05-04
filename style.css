@@ -473,6 +473,7 @@ input[type=checkbox]:checked ~ label span {
   margin-top: 100px;
   width: 100&;
   text-align: center;
+  max-height: auto !important;
 }
 
 .Prices h4 {
@@ -794,8 +795,6 @@ input[type=checkbox]:checked ~ label span {
     order: 2;
   }
 
-
-
   .Profiles .Cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -822,6 +821,10 @@ input[type=checkbox]:checked ~ label span {
 
   .Services .Information {
     padding: 15px 15px;
+  }
+
+  .Special-Offer {
+	height: 100px !important;
   }
 }
 
@@ -960,4 +963,9 @@ input[type=checkbox]:checked ~ label span {
   .Special-Offer h3 {
     font-size: 1.9vh;
   }
+
+  .Prices {
+     max-height: auto !important;
+     margin-top: 150px;
+	}
 }
