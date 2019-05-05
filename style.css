@@ -720,6 +720,21 @@ input[type=checkbox]:checked ~ label span {
 
 /* Start of styling for different screen sizes */
 
+@media screen and (min-width: 1400px) {
+
+  .Welcome p {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  .Welcome p {
+    font-size: 16px;
+  }
+}
+
+
 @media screen and (max-width: 1300px) {
 
   .Banner h1 {
@@ -727,7 +742,23 @@ input[type=checkbox]:checked ~ label span {
     font-size: 7vh;
   }
 
-  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
+  .Welcome{
+   flex-direction: column;
+  }
+
+  .Welcome section {
+    height: auto;
+  }
+
+  .Welcome-Odd :nth-child(odd) {
+    order: 1;
+  }
+
+  .Welcome-Even :nth-child(odd) {
+    order: 2;
+  }
+
+ .Mid-Banner-1, .Team, .Gallery, .Find {
     padding-left: 10px;
   	padding-top: 10px;
   }
@@ -777,22 +808,8 @@ input[type=checkbox]:checked ~ label span {
      display: block;
    }
 
-
   hr {
     width: 100% !important;
-  }
-
-  .Welcome {
-    flex-direction: column;
-  }
-
-
-  .Welcome-Odd :nth-child(odd) {
-    order: 1;
-  }
-
-  .Welcome-Even :nth-child(odd) {
-    order: 2;
   }
 
   .Profiles .Cards {
@@ -890,28 +907,11 @@ input[type=checkbox]:checked ~ label span {
      display: block;
    }
 
-  .Welcome{
-   flex-direction: column;
- }
+  .Welcome img {
+    max-height:  300px;
+  }
 
- .Welcome img {
-   height:  300px;
- }
-
- .Welcome section {
-   height: auto;
- }
-
-
- .Welcome-Odd :nth-child(odd) {
-   order: 1;
- }
-
- .Welcome-Even :nth-child(odd) {
-   order: 2;
- }
-
-  .Box2, .Box3, .Mid-Banner-1, .Team, .Gallery, .Find {
+  .Mid-Banner-1, .Team, .Gallery, .Find {
     padding-left: 10px;
   	padding-top: 10px;
   }
