@@ -225,10 +225,6 @@ input[type=checkbox]:checked ~ label span {
   margin-top: 10px;
 }
 
-.Welcome hr:last-of-type {
-
-}
-
 .Welcome a {
   text-decoration: none;
   color: #3B5998;
@@ -808,7 +804,7 @@ input[type=checkbox]:checked ~ label span {
      display: block;
    }
 
-  hr {
+  hr, #hr-W-2 {
     width: 100% !important;
   }
 
@@ -961,7 +957,7 @@ input[type=checkbox]:checked ~ label span {
   }
 
   .Special-Offer h3 {
-    font-size: 1.9vh;
+    font-size: 2.2vh;
   }
 
   .Prices {
